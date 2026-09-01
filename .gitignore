@@ -1,1 +1,23 @@
+# Java / Spring Boot
+backend-java/target/
+*.class
 
+# Python
+backend-python/__pycache__/
+backend-python/.venv/
+*.pyc
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+
+# Environment variables
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
