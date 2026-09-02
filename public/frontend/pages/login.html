@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login — C2C</title>
+    <meta name="description" content="Log in to the C2C academia–industry collaboration portal prototype." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <div class="auth">
+      <aside class="auth__aside">
+        <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+        <div>
+          <h2>Welcome back</h2>
+          <p>Continue building your skill profile and tracking your opportunities.</p>
+          <ul class="auth__points">
+            <li>See your skill gaps at a glance</li>
+            <li>Track internship and job applications</li>
+            <li>Share your digital portfolio</li>
+          </ul>
+        </div>
+        <small>Prototype build — authentication is not connected to a backend yet.</small>
+      </aside>
+
+      <main class="auth__main">
+        <div class="auth__card">
+          <div class="auth__mobile-brand">
+            <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+          </div>
+          <a class="auth__back" href="../index.html">← Back to home</a>
+
+          <h1>Log in</h1>
+          <p class="sub">Use any email and password — this demo does not verify credentials.</p>
+
+          <form id="loginForm" novalidate>
+            <div class="field">
+              <label for="email">Email</label>
+              <input class="input" type="email" id="email" name="email" autocomplete="email" placeholder="you@example.edu" />
+              <p class="error-text" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Password</label>
+              <input class="input" type="password" id="password" name="password" autocomplete="current-password" placeholder="Your password" />
+              <p class="error-text" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="role">Continue as (demo only)</label>
+              <select class="select" id="role" name="role">
+                <option value="">Let me choose on the next page</option>
+                <option value="student">Student</option>
+                <option value="industry">Industry</option>
+                <option value="faculty">Faculty</option>
+                <option value="admin">Institution Admin</option>
+              </select>
+              <p class="hint">Role selection here is only for navigating the prototype.</p>
+            </div>
+
+            <div class="auth__row">
+              <label class="checkbox"><input type="checkbox" name="remember" /> Remember me</label>
+              <a href="#" onclick="return false;">Forgot password?</a>
+            </div>
+
+            <button class="btn btn--primary btn--block btn--lg" type="submit">Login</button>
+          </form>
+
+          <p class="auth__footer">Don't have an account? <a href="register.html">Register</a></p>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register — C2C</title>
+    <meta name="description" content="Create a C2C demo account as a student, industry partner, faculty member or institution admin." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <div class="auth">
+      <aside class="auth__aside">
+        <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+        <div>
+          <h2>Create your C2C account</h2>
+          <p>One portal for skills, internships, placements and academia–industry collaboration.</p>
+          <ul class="auth__points">
+            <li>Students: assess skills and find matched opportunities</li>
+            <li>Industry: post roles and discover candidates</li>
+            <li>Faculty &amp; institutions: training, research and analytics</li>
+          </ul>
+        </div>
+        <small>Prototype build — no account is actually created and nothing is stored.</small>
+      </aside>
+
+      <main class="auth__main">
+        <div class="auth__card">
+          <div class="auth__mobile-brand">
+            <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+          </div>
+          <a class="auth__back" href="../index.html">← Back to home</a>
+
+          <h1>Register</h1>
+          <p class="sub">Fields marked below are validated in the browser only.</p>
+
+          <div class="alert alert--success" id="registerSuccess" hidden role="status">
+            Registration details look valid. Next step:
+            <a href="role-selection.html">choose how you'll use C2C</a>.
+          </div>
+
+          <form id="registerForm" novalidate>
+            <div class="field">
+              <label for="fullName">Full name</label>
+              <input class="input" type="text" id="fullName" name="fullName" autocomplete="name" placeholder="e.g. Alex Menon" />
+              <p class="error-text" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="regEmail">Email</label>
+              <input class="input" type="email" id="regEmail" name="email" autocomplete="email" placeholder="you@example.edu" />
+              <p class="error-text" role="alert"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="password">Password</label>
+                <input class="input" type="password" id="password" name="password" autocomplete="new-password" placeholder="Min. 8 characters" />
+                <p class="error-text" role="alert"></p>
+              </div>
+              <div class="field">
+                <label for="confirmPassword">Confirm password</label>
+                <input class="input" type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" placeholder="Re-enter password" />
+                <p class="error-text" role="alert"></p>
+              </div>
+            </div>
+
+            <fieldset class="field" style="border:0;padding:0;margin:0 0 1.05rem">
+              <legend class="field__label">I am registering as</legend>
+              <div class="radio-cards">
+                <label class="radio-card">
+                  <input type="radio" name="role" value="student" checked />
+                  <span class="radio-card__title">Student</span>
+                  <span class="radio-card__text">Skills, internships, portfolio</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="role" value="industry" />
+                  <span class="radio-card__title">Industry</span>
+                  <span class="radio-card__text">Post roles, find talent</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="role" value="faculty" />
+                  <span class="radio-card__title">Faculty</span>
+                  <span class="radio-card__text">FDPs, training, research</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="role" value="admin" />
+                  <span class="radio-card__title">Institution Admin</span>
+                  <span class="radio-card__text">Analytics and tracking</span>
+                </label>
+              </div>
+              <p class="alert alert--danger" id="roleAlert" hidden role="alert">Please select a role.</p>
+            </fieldset>
+
+            <!-- Role-specific fields rendered by js/auth.js -->
+            <div id="roleFields"></div>
+
+            <label class="checkbox" style="margin-bottom:1rem">
+              <input type="checkbox" name="terms" /> I understand this is a student prototype
+            </label>
+
+            <button class="btn btn--primary btn--block btn--lg" type="submit">Create account</button>
+          </form>
+
+          <p class="auth__footer">Already have an account? <a href="login.html">Login</a></p>
+        </div>
+      </main>
+    </div>
+
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+  </body>
+</html>
