@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose your role — C2C</title>
+    <meta name="description" content="Choose whether you use C2C as a student, industry partner, faculty member or institution." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" data-navbar aria-label="Main navigation">
+          <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+          <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#features">Features</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a class="btn btn--outline btn--sm" href="login.html">Login</a>
+            <a class="btn btn--primary btn--sm" href="register.html">Register</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="role-page">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Role selection</span>
+          <h1>How will you use C2C?</h1>
+          <p>Pick a role to continue. You can explore every role in this prototype.</p>
+        </div>
+
+        <!-- Cards rendered from js/mock-data.js by renderRoleCards() -->
+        <div class="role-grid" id="roleGrid"></div>
+
+        <p style="text-align:center;margin-top:2rem">
+          <span class="demo-note">Dashboards for each role arrive in the next development stage.</span>
+        </p>
+      </div>
+    </main>
+
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

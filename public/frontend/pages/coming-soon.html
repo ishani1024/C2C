@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coming soon — C2C</title>
+    <meta name="description" content="This C2C dashboard is planned for the next development stage of the prototype." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" data-navbar aria-label="Main navigation">
+          <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+          <div class="nav-actions">
+            <a class="btn btn--outline btn--sm" href="role-selection.html">Change role</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <div class="empty-state" style="max-width:620px;margin-inline:auto">
+          <h1 style="font-size:1.5rem">The <span id="comingSoonRole">selected</span> dashboard is coming soon</h1>
+          <p>
+            Stage 1 and Stage 2 of the frontend are complete: design system, landing page,
+            login, registration and role selection. Dashboards are built in the next stage.
+          </p>
+          <div class="btn-row" style="justify-content:center">
+            <a class="btn btn--primary" href="../index.html">Back to home</a>
+            <a class="btn btn--outline" href="role-selection.html">Pick another role</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/mock-data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+  </body>
+</html>
