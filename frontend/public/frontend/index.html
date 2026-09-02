@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>C2C — Bridge the Gap Between Academia and Industry</title>
+    <meta
+      name="description"
+      content="C2C connects students, academia and industry for skill mapping, skill gap analysis, internships and placements."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" data-navbar aria-label="Main navigation">
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true">C2</span>
+            C2C
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="nav-links">
+            <li><a href="#home" aria-current="page">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#students">For Students</a></li>
+            <li><a href="#industry">For Industry</a></li>
+            <li><a href="#academia">For Academia</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a class="btn btn--outline btn--sm" href="pages/login.html">Login</a>
+            <a class="btn btn--primary btn--sm" href="pages/register.html">Get Started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="container hero__inner">
+          <div>
+            <span class="eyebrow">SIH26044 · Academia–Industry Portal</span>
+            <h1>Bridge the Gap Between Academia and Industry</h1>
+            <p class="hero__lead">
+              C2C helps students discover their skills, identify skill gaps, and find
+              internships and jobs that actually match them — while industries and
+              institutions collaborate on the talent they need.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="pages/register.html">Get Started</a>
+              <a class="btn btn--outline btn--lg" href="pages/login.html">Explore Opportunities</a>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat"><strong>4 roles</strong><span>Students · Industry · Faculty · Institutions</span></div>
+              <div class="hero__stat"><strong>Skill-first</strong><span>Assessment to placement in one flow</span></div>
+            </div>
+            <p style="margin-top:1.25rem"><span class="demo-note">Prototype build — all figures shown are demo data.</span></p>
+          </div>
+
+          <!-- CSS-only ecosystem visual -->
+          <div class="ecosystem" role="img"
+               aria-label="Ecosystem diagram: students and industry connect through C2C, with academia connected to the centre">
+            <p class="ecosystem__title">The C2C ecosystem</p>
+            <div class="ecosystem__row">
+              <div class="eco-node">Students<small>Skills &amp; portfolios</small></div>
+              <span class="eco-link" aria-hidden="true">↔</span>
+              <div class="eco-node eco-node--core">C2C<small>Skill mapping engine</small></div>
+              <span class="eco-link" aria-hidden="true">↔</span>
+              <div class="eco-node">Industry<small>Opportunities</small></div>
+            </div>
+            <div class="ecosystem__vertical" aria-hidden="true">↕</div>
+            <div class="ecosystem__row">
+              <div class="eco-node eco-node--academia">Academia &amp; Institutions<small>Curriculum, FDPs, analytics</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="section section--alt" id="how-it-works">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">How it works</span>
+            <h2>From assessment to opportunity in four steps</h2>
+            <p>A simple, repeatable path that keeps students moving toward a real career outcome.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step"><div class="step__num">1</div><h3>Assess</h3><p>Take structured technical and soft-skill assessments.</p></li>
+            <li class="step"><div class="step__num">2</div><h3>Map</h3><p>Skills are mapped to career paths and industry roles.</p></li>
+            <li class="step"><div class="step__num">3</div><h3>Learn</h3><p>Get recommended learning to close the identified gaps.</p></li>
+            <li class="step"><div class="step__num">4</div><h3>Connect</h3><p>Apply to matched internships and jobs, and track progress.</p></li>
+          </ol>
+
+          <div class="flow">
+            <span class="flow__item">Assess your skills</span><span aria-hidden="true">→</span>
+            <span class="flow__item">Identify skill gaps</span><span aria-hidden="true">→</span>
+            <span class="flow__item">Get recommendations</span><span aria-hidden="true">→</span>
+            <span class="flow__item">Apply to opportunities</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Core features</span>
+            <h2>Everything the collaboration needs</h2>
+            <p>One platform covering skills, opportunities, learning and analytics.</p>
+          </div>
+          <!-- Rendered from js/mock-data.js by renderFeatures() -->
+          <div class="grid grid--4" id="featureGrid"></div>
+        </div>
+      </section>
+
+      <!-- WHO IS IT FOR -->
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Who is it for</span>
+            <h2>Built for the whole ecosystem</h2>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="audience-card" id="students">
+              <h3>Students</h3>
+              <p>Understand where you stand and what to do next.</p>
+              <ul><li>Skill assessment &amp; gap analysis</li><li>Matched internships and jobs</li><li>Digital portfolio</li></ul>
+            </article>
+
+            <article class="audience-card" id="industry">
+              <h3>Industries</h3>
+              <p>Reach job-ready students without the guesswork.</p>
+              <ul><li>Post internships, jobs, projects</li><li>Skill-based candidate matching</li><li>Recommend industry learning</li></ul>
+            </article>
+
+            <article class="audience-card" id="academia">
+              <h3>Academicians</h3>
+              <p>Stay connected to industry practice.</p>
+              <ul><li>FDPs and industrial training</li><li>Research collaboration</li><li>Student mentorship</li></ul>
+            </article>
+
+            <article class="audience-card" id="institutions">
+              <h3>Institutions</h3>
+              <p>Track outcomes with data, not intuition.</p>
+              <ul><li>Skill demand insights</li><li>Internship participation</li><li>Placement readiness</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="container">
+          <div class="cta-band">
+            <h2>Ready to bridge the academia-industry gap?</h2>
+            <p>Create a demo account and explore the C2C prototype from any role.</p>
+            <div class="btn-row">
+              <a class="btn btn--secondary btn--lg" href="pages/register.html">Get Started</a>
+              <a class="btn btn--outline btn--lg" href="pages/role-selection.html">Choose a role</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">C2</span> C2C</a>
+            <p>An academia–industry collaboration portal for skill mapping, internships and placements. Student prototype built for SIH26044.</p>
+          </div>
+          <div>
+            <h4>Platform</h4>
+            <ul>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="pages/role-selection.html">Roles</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Account</h4>
+            <ul>
+              <li><a href="pages/login.html">Login</a></li>
+              <li><a href="pages/register.html">Register</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li>team@c2c.example</li>
+              <li>Placeholder contact details</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> C2C · Student project prototype</span>
+          <span>No real data is stored in this build.</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/mock-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
