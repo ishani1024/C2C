@@ -359,7 +359,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- 6. How it works ---------- */
 .steps {
-  counter-reset: step;
+  list-style: none;
+  padding: 0;
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
