@@ -1,0 +1,51 @@
+/* SkillBridge Warm Signal auth layer: calm paper canvas, strong navy action, candid validation states. */
+
+.auth-page { min-height: 100vh; background: var(--cream); }
+.auth-layout { display: grid; min-height: 100vh; grid-template-columns: minmax(340px, .86fr) minmax(480px, 1.14fr); }
+.auth-panel { position: relative; display: flex; align-items: center; padding: 50px max(7vw, 48px); overflow: hidden; background: var(--primary); color: var(--white); }
+.auth-panel::after { position: absolute; right: -100px; bottom: -100px; width: 340px; height: 340px; border: 1px solid rgba(249,222,201,.18); border-radius: 50%; content: ""; box-shadow: 0 0 0 34px rgba(249,222,201,.04), 0 0 0 68px rgba(249,222,201,.03); }
+.auth-panel-inner { position: relative; z-index: 1; max-width: 420px; }
+.auth-panel .brand { margin-bottom: 65px; }
+.auth-panel .eyebrow { color: var(--rose); }
+.auth-panel h1 { margin: 0; color: var(--cream); font-family: var(--serif); font-size: clamp(2.7rem, 5vw, 4.7rem); font-weight: 400; letter-spacing: -.05em; line-height: .98; }
+.auth-panel p { max-width: 340px; margin: 22px 0 0; color: rgba(255,255,255,.66); font-size: 15px; }
+.auth-quote { position: absolute; bottom: 50px; left: max(7vw, 48px); color: rgba(255,255,255,.47); font-size: 11px; font-weight: 700; letter-spacing: .02em; }
+.auth-form-wrap { display: flex; align-items: center; padding: 50px max(6vw, 42px); background: var(--cream); }
+.auth-form { width: min(100%, 480px); margin: 0 auto; }
+.auth-form-header { margin-bottom: 30px; }
+.auth-form-header h2 { margin: 0 0 8px; color: var(--primary); font-family: var(--serif); font-size: 40px; font-weight: 400; letter-spacing: -.04em; line-height: 1; }
+.auth-form-header p { margin: 0; color: var(--ink-soft); font-size: 13px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.form-field { margin-bottom: 16px; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { display: block; margin: 0 0 7px; color: var(--brown); font-size: 11px; font-weight: 850; letter-spacing: .02em; }
+.form-field input, .form-field select, .form-field textarea, .search-field input { width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid rgba(104,80,68,.25); border-radius: 10px; outline: none; background: rgba(255,255,255,.58); color: var(--primary); transition: border-color .18s var(--ease-out), box-shadow .18s var(--ease-out), background .18s var(--ease-out); }
+.form-field textarea { min-height: 110px; padding-top: 13px; resize: vertical; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: rgba(104,80,68,.5); }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus, .search-field input:focus { border-color: var(--primary); background: var(--white); box-shadow: 0 0 0 4px rgba(174,197,235,.52); }
+.form-field.invalid input, .form-field.invalid select, .form-field.invalid textarea { border-color: var(--rose); box-shadow: 0 0 0 4px rgba(233,175,163,.28); }
+.field-error { display: none; margin-top: 6px; color: var(--brown); font-size: 10px; font-weight: 750; }
+.form-field.invalid .field-error { display: block; }
+.form-meta { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: -1px 0 20px; color: var(--ink-soft); font-size: 11px; }
+.checkbox { display: inline-flex; align-items: center; gap: 8px; }
+.checkbox input { accent-color: var(--primary); }
+.form-actions { display: grid; gap: 10px; }
+.form-actions .btn { width: 100%; }
+.form-footer { margin-top: 23px; text-align: center; color: var(--ink-soft); font-size: 12px; }
+.form-footer a { color: var(--primary); font-weight: 850; text-decoration: underline; text-decoration-color: var(--rose); text-underline-offset: 3px; }
+.back-home { position: absolute; top: 27px; right: 42px; color: var(--brown); font-size: 11px; font-weight: 800; }
+.back-home:hover { color: var(--primary); }
+.form-status { min-height: 18px; margin: 0 0 12px; color: var(--brown); font-size: 11px; font-weight: 750; }
+
+@media (max-width: 800px) {
+  .auth-layout { display: block; }
+  .auth-panel { min-height: 330px; padding: 42px 24px 58px; }
+  .auth-panel .brand { margin-bottom: 42px; }
+  .auth-quote { bottom: 24px; left: 24px; }
+  .auth-form-wrap { padding: 48px 24px 60px; }
+  .back-home { top: 19px; right: 24px; }
+}
+@media (max-width: 520px) {
+  .form-grid { display: block; }
+  .auth-form-header h2 { font-size: 34px; }
+}
