@@ -1,0 +1,70 @@
+/* SkillBridge Warm Signal responsive layer: preserve editorial hierarchy and convert navigation to a focused mobile drawer. */
+
+.mobile-overlay { display: none; }
+@media (max-width: 760px) {
+  .container { width: min(100% - 36px, 620px); }
+  .site-header { padding: 18px 0; }
+  .site-nav, .site-header .header-actions { display: none; }
+  .site-header .container::after { display: block; width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; color: var(--white); content: "☰"; font-size: 17px; line-height: 34px; text-align: center; }
+  .hero { min-height: auto; padding: 112px 0 62px; }
+  .hero::before { width: 100%; height: 45%; opacity: .35; clip-path: polygon(0 0,100% 0,100% 100%,0 78%); }
+  .hero .container { display: block; min-height: 0; padding-top: 0; }
+  .display-title { font-size: clamp(3rem, 14vw, 4.5rem); }
+  .hero-copy { padding: 0; }
+  .hero-copy p:not(.eyebrow) { font-size: 15px; }
+  .hero-visual { min-height: 330px; margin-top: 25px; }
+  .hero-visual .visual-image { inset: 0 -45px -25px -25px; width: calc(100% + 70px); }
+  .hero-card { right: 0; bottom: 0; width: 180px; }
+  .section { padding: 76px 0; }
+  .section-header { display: block; margin-bottom: 28px; }
+  .section-header .section-copy { margin-top: 16px; }
+  .problem-grid, .feature-grid, .stats-grid { grid-template-columns: 1fr; }
+  .problem-card { min-height: 220px; }
+  .card-number { margin-bottom: 45px; }
+  .workflow { display: block; }
+  .workflow-steps { grid-template-columns: 1fr 1fr; margin-top: 28px; }
+  .workflow-step:not(:last-child)::after { display: none; }
+  .workflow-step { padding: 12px 12px 25px 0; }
+  .workflow-step .step-index { margin-bottom: 15px; }
+  .footer-top, .footer-bottom { display: block; }
+  .footer-links { margin-top: 30px; gap: 14px 22px; }
+  .footer-bottom span { display: block; margin-top: 11px; }
+  .portal-sidebar { left: -250px; width: 238px; box-shadow: 12px 0 35px rgba(58,64,90,.22); transition: left .25s var(--ease-out); }
+  .portal-sidebar.open { left: 0; }
+  .portal-main { margin-left: 0; }
+  .portal-topbar { min-height: 68px; padding: 0 18px; }
+  .topbar-menu { display: inline-flex; }
+  .portal-content { width: min(100% - 36px, 620px); padding: 40px 0 60px; }
+  .portal-heading { display: block; margin-bottom: 28px; }
+  .portal-heading .btn { margin-top: 19px; }
+  .dashboard-row { grid-template-columns: 1fr; }
+  .readiness-card { display: block; min-height: 0; padding: 25px; }
+  .score-ring { width: 145px; height: 145px; margin: 25px auto 0; }
+  .score-ring strong { font-size: 37px; }
+  .skill-map-list { grid-template-columns: 1fr; }
+  .opportunity-card { grid-template-columns: 1fr; }
+  .opportunity-aside { min-width: 0; align-items: start; }
+  .resource-card { grid-template-columns: 72px 1fr; }
+  .resource-thumb { width: 72px; height: 64px; }
+  .resource-card .btn { grid-column: 1 / -1; }
+  .search-bar { align-items: stretch; flex-direction: column; }
+  .search-bar .btn { width: 100%; }
+  .assessment-card, .results-card { padding: 25px; }
+  .assessment-top { align-items: start; flex-direction: column; }
+  .result-summary { grid-template-columns: 1fr; }
+  .result-row { grid-template-columns: 105px 1fr 36px; gap: 8px; }
+  .result-row .skill-track { grid-column: 2; }
+  .result-row strong { font-size: 10px; }
+}
+@media (max-width: 420px) {
+  .hero-actions { display: grid; }
+  .hero-actions .btn { width: 100%; }
+  .workflow-steps { grid-template-columns: 1fr; }
+  .workflow-step { display: grid; grid-template-columns: 54px 1fr; gap: 12px; padding: 12px 0; }
+  .workflow-step .step-index { grid-row: 1 / span 2; }
+  .workflow-step h3 { align-self: end; }
+  .workflow-step p { align-self: start; }
+  .card-pad { padding: 20px; }
+  .skill-table { min-width: 620px; }
+  .table-card { overflow-x: auto; }
+}
